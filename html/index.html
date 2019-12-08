@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,56 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../layui/css/layui.css">
 </head>
+
 <body>
-  
+  <div class="layui-row layui-bg-black">
+    <div class="layui-col-md1" style="font-size: 24px;height: 60px;line-height: 60px;text-indent: 20px;">自学管理平台</div>
+    <ul class="layui-nav layui-col-md2 layui-col-md-offset9" lay-filter="">
+      <li class="layui-nav-item"><a href="">历史信息</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">何生鑫</a>
+        <dl class="layui-nav-child">
+          <!-- 二级菜单 -->
+          <dd><a href="">个人中心</a></dd>
+          <dd><a href="">退出</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+  <div style="display: flex;justify-content: space-between;height: calc(100vh - 60px);">
+    <!-- 菜单部分 -->
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+      <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item layui-nav-itemed">
+        <a href="javascript:;">默认展开</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">选项1</a></dd>
+          <dd><a href="javascript:;">选项2</a></dd>
+          <dd><a href="">跳转</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">移动模块</a></dd>
+          <dd><a href="">后台模版</a></dd>
+          <dd><a href="">电商平台</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">产品</a></li>
+      <li class="layui-nav-item"><a href="">大数据</a></li>
+    </ul>
+    <!-- 主体部分 -->
+    <div></div>
+  </div>
 </body>
+
 </html>
-<script src="../layui/layui.js"></script>
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript">
+  layui.use('element', function () {
+    var element = layui.element;
+
+    //…
+  })
+</script>
