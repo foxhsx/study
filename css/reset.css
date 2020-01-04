@@ -347,3 +347,28 @@ template {
 [hidden] {
   display: none;
 }
+
+/*
+* 通用基础样式
+*/
+.chart {
+  width: 100%;
+  height: 380px;
+}
+/* 外层元素设置overflow:hidden */
+.content {
+  flex: 1;
+  padding: 15px 0 15px 15px;
+  overflow: hidden;
+}
+/* 内存元素可以滚动，但是宽度上比外层元素多15像素，即滚动条得宽度，这里用padding值将滚动条挤走 */
+.content-scroll {
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding-right: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.crumbs {
+  margin: 0 0 10px 0;
+}

@@ -8,12 +8,14 @@
   <title>自学-首页</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../layui/css/layui.css">
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
+  <!-- 头部 -->
   <div class="layui-row layui-bg-black">
-    <div class="layui-col-md1" style="font-size: 24px;height: 60px;line-height: 60px;text-indent: 20px;">自学管理平台</div>
-    <ul class="layui-nav layui-col-md2 layui-col-md-offset9" lay-filter="">
+    <div class="layui-col-md2" style="font-size: 24px;height: 60px;line-height: 60px;text-indent: 20px;">自学管理平台</div>
+    <ul class="layui-nav layui-col-md2 layui-col-md-offset8" lay-filter="">
       <li class="layui-nav-item"><a href="">历史信息</a></li>
       <li class="layui-nav-item">
         <a href="javascript:;">何生鑫</a>
@@ -29,36 +31,271 @@
     <!-- 菜单部分 -->
     <ul class="layui-nav layui-nav-tree" lay-filter="test">
       <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
-      <li class="layui-nav-item layui-nav-itemed">
-        <a href="javascript:;">默认展开</a>
-        <dl class="layui-nav-child">
-          <dd><a href="javascript:;">选项1</a></dd>
-          <dd><a href="javascript:;">选项2</a></dd>
-          <dd><a href="">跳转</a></dd>
-        </dl>
+      <li class="layui-nav-item">
+        <a href="">首页</a>
       </li>
       <li class="layui-nav-item">
-        <a href="javascript:;">解决方案</a>
+        <a href="javascript:;">FLAG</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">笔记</a>
         <dl class="layui-nav-child">
-          <dd><a href="">移动模块</a></dd>
-          <dd><a href="">后台模版</a></dd>
-          <dd><a href="">电商平台</a></dd>
+          <dd><a href="">前端</a></dd>
+          <dd><a href="">后端</a></dd>
+          <dd><a href="">其他</a></dd>
         </dl>
       </li>
-      <li class="layui-nav-item"><a href="">产品</a></li>
-      <li class="layui-nav-item"><a href="">大数据</a></li>
+      <li class="layui-nav-item"><a href="">自学学科</a></li>
+      <li class="layui-nav-item"><a href="">自学资源</a></li>
+      <li class="layui-nav-item"><a href="">日记</a></li>
+      <li class="layui-nav-item"><a href="">系统设置</a></li>
     </ul>
     <!-- 主体部分 -->
-    <div></div>
+    <div class="content">
+      <div class="content-scroll">
+        <!-- 面包屑 -->
+        <div class="layui-row crumbs">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+          </span>
+        </div>
+        <!-- 内容content -->
+        <div>
+          <div class="layui-row layui-col-space20">
+            <div class="layui-col-md4">
+              <div class="layui-row layui-bg-red index-statistics">
+                <a href="">
+                  <div>
+                    <span class="study-name">书籍</span>
+                    <span class="count">0本</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="layui-col-md4">
+              <div class="layui-row layui-bg-orange index-statistics">
+                <a href="">
+                  <div>
+                    <span class="study-name">视频</span>
+                    <span class="count">0部</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="layui-col-md4">
+              <div class="layui-row layui-bg-green index-statistics">
+                <a href="">
+                  <div>
+                    <span class="study-name">健身</span>
+                    <span class="count">0分钟</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="layui-row layui-col-space20">
+            <div class="layui-col-md4 echarts-box">
+              <div class="layui-colla-title">
+                <p>日统计信息</p>
+                <div class="layui-inline" title="请选择日期">
+                  <i class="layui-icon layui-icon-date"></i>
+                  <input type="text" class="layui-input" placeholder="日期选择" lay-key="1" id="day">
+                </div>
+              </div>
+              <div id="day-echarts" class="chart"></div>
+            </div>
+            <div class="layui-col-md4 echarts-box">
+              <div class="layui-colla-title">
+                <p>月统计信息</p>
+                <div class="layui-inline" title="请选择月">
+                  <i class="layui-icon layui-icon-date"></i>
+                  <input type="text" class="layui-input" id="month">
+                </div>
+              </div>
+              <div id="month-echarts" class="chart"></div>
+            </div>
+            <div class="layui-col-md4 echarts-box">
+              <div class="layui-colla-title">
+                <p>年统计信息</p>
+                <div class="layui-inline" title="请选择年">
+                  <i class="layui-icon layui-icon-date"></i>
+                  <input type="text" class="layui-input" id="year">
+                </div>
+              </div>
+              <div id="year-echarts" class="chart"></div>
+            </div>
+          </div>
+          <div class="layui-row layui-col-space20">
+            <div class="layui-col-md4 flag-box">
+              <div class="layui-colla-title">日计划</div>
+              <div class="layui-box layui-text flag-item">
+                <form class="layui-form">
+                  <div class="layui-form-item"><input type="checkbox" name="" title="1.50本书"></div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="2.减肥健身"></div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="3.学会Java">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="4.react和angular框架学习">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="5.开发自己的开源项目">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="6.封装10个插件">
+                  </div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="7.工资再创新高？"></div>
+                </form>
+              </div>
+            </div>
+            <div class="layui-col-md4 flag-box">
+              <div class="layui-colla-title">月计划</div>
+              <div class="layui-box layui-text flag-item">
+                <form class="layui-form">
+                  <div class="layui-form-item"><input type="checkbox" name="" title="1.50本书"></div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="2.减肥健身"></div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="3.学会Java">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="4.react和angular框架学习">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="5.开发自己的开源项目">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="6.封装10个插件">
+                  </div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="7.工资再创新高？"></div>
+                </form>
+              </div>
+            </div>
+            <div class="layui-col-md4 flag-box">
+              <div class="layui-colla-title">年计划</div>
+              <div class="layui-box layui-text flag-item">
+                <form class="layui-form">
+                  <div class="layui-form-item"><input type="checkbox" name="" title="1.50本书"></div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="2.减肥健身"></div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="3.学会Java">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="4.react和angular框架学习">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="5.开发自己的开源项目">
+                  </div>
+                  <div class="layui-form-item">
+                    <input type="checkbox" name="" title="6.封装10个插件">
+                  </div>
+                  <div class="layui-form-item"><input type="checkbox" name="" title="7.工资再创新高？"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
 </html>
 <script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/3.6.2/echarts.min.js"></script>
+<script type="text/javascript" src="../js/util/index.js"></script>
 <script type="text/javascript">
-  layui.use('element', function () {
+  layui.use(['element', 'laydate', 'form'], function () {
     var element = layui.element;
+    var laydate = layui.laydate;
+    var form  = layui.form;
 
-    //…
+    //执行一个laydate实例
+    // 日期选择器
+    laydate.render({
+      elem: '#day', //指定元素
+      type: 'date', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
+
+    // 月
+    laydate.render({
+      elem: '#month', //指定元素
+      type: 'month', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
+
+    // 年
+    laydate.render({
+      elem: '#year', //指定元素
+      type: 'year', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
   })
+
+  // 日统计信息
+  let dayOptions = {
+    el: 'day-echarts',
+    option: {
+      tooltip: {},
+      legend: {
+        data: ['时间']
+      },
+      xAxis: {
+        data: ["react", "vue", "Java", "看书", "总结"]
+      },
+      yAxis: {},
+      series: [{
+        name: '时间',
+        type: 'line',
+        data: [5, 20, 36, 10, 10]
+      }]
+    }
+  };
+  echartFunc(dayOptions);
+  // 月统计信息
+  let monthOptions = {
+    el: 'month-echarts',
+    option: {
+      tooltip: {},
+      legend: {
+        data: ['时间']
+      },
+      xAxis: {
+        data: ["react", "vue", "Java", "看书", "总结"]
+      },
+      yAxis: {},
+      series: [{
+        name: '时间',
+        type: 'line',
+        data: [5, 20, 36, 10, 10]
+      }]
+    }
+  };
+  echartFunc(monthOptions);
+  // 年统计信息
+  let yearOptions = {
+    el: 'year-echarts',
+    option: {
+      tooltip: {},
+      legend: {
+        data: ['时间']
+      },
+      xAxis: {
+        data: ["react", "vue", "Java", "看书", "总结"]
+      },
+      yAxis: {},
+      series: [{
+        name: '时间',
+        type: 'line',
+        data: [5, 20, 36, 10, 10]
+      }]
+    }
+  };
+  echartFunc(yearOptions);
 </script>
