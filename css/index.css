@@ -28,13 +28,7 @@
   top: 0;
   right: 12px;
 }
-.layui-colla-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 700;
-}
+
 .flag-box {
   padding-bottom: 50px;
 }
@@ -48,15 +42,18 @@
 .flag-item::after {
   position: absolute;
   content: '确定能完成吗？';
-  width: 30%;
-  height: 60%;
   top: 50%;
-  right: 10%;
+  right: 8%;
   text-align: center;
   line-height: 6.6;
   font-weight: 700;
+  padding: 0 10px;
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: #fff;
   z-index: 1;
+}
+.layui-form-checkbox {
+  z-index: 2;
+  opacity: .96;
 }

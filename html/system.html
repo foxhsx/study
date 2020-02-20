@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>系统设置</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <div class="layui-bg-black layui-flex">
+    <div class="layui-logo">自学管理平台</div>
+    <ul class="layui-nav" lay-filter="">
+      <li class="layui-nav-item">
+        <a href="javascript:;">何生鑫</a>
+        <dl class="layui-nav-child">
+          <!-- 二级菜单 -->
+          <dd><a href="">个人中心</a></dd>
+          <dd><a href="">退出</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+  <div class="layui-section">
+    <!-- 菜单部分 -->
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+      <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item">
+        <a href="index.html">首页</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="flag.html">FLAG</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">笔记</a>
+        <dl class="layui-nav-child">
+          <dd><a href="./note-web.html">前端</a></dd>
+          <dd><a href="./note-backend.html">后端</a></dd>
+          <dd><a href="./note-other.html">其他</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="./study-with-me.html">自学学科</a></li>
+      <li class="layui-nav-item"><a href="./study-with-resources.html">自学资源</a></li>
+      <li class="layui-nav-item"><a href="diary.html">日记</a></li>
+      <li class="layui-nav-item layui-this"><a href="./system.html">系统设置</a></li>
+    </ul>
+    <!-- 主体部分 -->
+    <div class="content">
+      <div class="content-scroll">
+        <!-- 面包屑 -->
+        <div class="layui-row crumbs">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a href="">系统设置</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript">
+  layui.use(['element'], function() {
+
+  })
+</script>

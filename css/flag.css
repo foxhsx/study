@@ -1,0 +1,7 @@
+.flag-item {
+  position: relative;
+  min-height: 300px;
+  line-height: 24px;
+  font-size: 16px;
+  background-color: #f2f2f25c;
+}

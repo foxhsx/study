@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flag-自学</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <link rel="stylesheet" href="../css/flag.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="layui-bg-black layui-flex">
+    <div class="layui-logo">自学管理平台</div>
+    <ul class="layui-nav" lay-filter="">
+      <li class="layui-nav-item">
+        <a href="javascript:;">何生鑫</a>
+        <dl class="layui-nav-child">
+          <!-- 二级菜单 -->
+          <dd><a href="">个人中心</a></dd>
+          <dd><a href="">退出</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+  <div class="layui-section">
+    <!-- 菜单部分 -->
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+      <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item">
+        <a href="index.html">首页</a>
+      </li>
+      <li class="layui-nav-item layui-this">
+        <a href="flag.html">FLAG</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">笔记</a>
+        <dl class="layui-nav-child">
+          <dd><a href="./note-web.html">前端</a></dd>
+          <dd><a href="./note-backend.html">后端</a></dd>
+          <dd><a href="./note-other.html">其他</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="./study-with-me.html">自学学科</a></li>
+      <li class="layui-nav-item"><a href="./study-with-resources.html">自学资源</a></li>
+      <li class="layui-nav-item"><a href="./diary.html">日记</a></li>
+      <li class="layui-nav-item"><a href="./system.html">系统设置</a></li>
+    </ul>
+    <div class="content">
+      <div class="content-scroll">
+        <!-- 面包屑 -->
+        <div class="layui-row crumbs">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a href="">flag</a>
+          </span>
+        </div>
+        <!-- 内容content -->
+        <div class="layui-content">
+          <div class="layui-row layui-col-space20" style="margin-right: 0;">
+            <!-- 年 -->
+            <div class="layui-col-md4">
+              <div class="layui-colla-title">
+                <p class="layui-text">年计划</p>
+                <div class="layui-inline" title="请选择年">
+                  <input type="text" class="layui-input" id="year">
+                </div>
+              </div>
+              <div class="layui-box layui-text flag-item">
+                <div class="layui-collapse">
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>1.50本书</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>2.减肥健身</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>3.学会Java</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>4.react和angular框架学习</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>5.开发自己的开源项目</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>6.封装10个插件</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>7.收入再创新高？</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 月 -->
+            <div class="layui-col-md4">
+              <div class="layui-colla-title">
+                <p class="layui-text">月计划</p>
+                <div class="layui-inline" title="请选择月">
+                  <input type="text" class="layui-input" id="month">
+                </div>
+              </div>
+              <div class="layui-box layui-text flag-item">
+                <div class="layui-collapse">
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>1.50本书</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>2.减肥健身</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>3.学会Java</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>4.react和angular框架学习</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>5.开发自己的开源项目</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>6.封装10个插件</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>7.收入再创新高？</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 日 -->
+            <div class="layui-col-md4">
+              <div class="layui-colla-title">
+                <p class="layui-text">日计划</p>
+                <div class="layui-inline" title="请选择日">
+                  <input type="text" class="layui-input" id="day">
+                </div>
+              </div>
+              <div class="layui-box layui-text flag-item">
+                <div class="layui-collapse">
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>1.50本书</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>2.减肥健身</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>3.学会Java</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>4.react和angular框架学习</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>5.开发自己的开源项目</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>6.封装10个插件</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                  <div class="layui-colla-item">
+                    <h4 class="layui-colla-title">
+                      <span>7.收入再创新高？</span>
+                      <button class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">编辑</button>
+                    </h4>
+                    <div class="layui-colla-content layui-show">内容区域</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript">
+  layui.use(['element', 'laydate'], function () {
+    var element = layui.element;
+    var laydate = layui.laydate;
+
+    //执行一个laydate实例
+    // 日期选择器
+    laydate.render({
+      elem: '#day', //指定元素
+      type: 'date', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
+
+    // 月
+    laydate.render({
+      elem: '#month', //指定元素
+      type: 'month', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
+
+    // 年
+    laydate.render({
+      elem: '#year', //指定元素
+      type: 'year', // 日期选择器
+      value: new Date(),   // 初始值
+      trigger: 'click', //采用click弹出，默认是focus
+      theme: 'molv'
+    });
+  })
+</script>

@@ -1,0 +1,11 @@
+.card-content {
+  margin-top: 10px;
+}
+.layui-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.layui-icon,
+.layui-col-md3  {
+  cursor: pointer;
+}

@@ -351,6 +351,7 @@ template {
 /*
 * 通用基础样式
 */
+/* echarts容器样式 */
 .chart {
   width: 100%;
   height: 380px;
@@ -358,17 +359,51 @@ template {
 /* 外层元素设置overflow:hidden */
 .content {
   flex: 1;
-  padding: 15px 0 15px 15px;
+  padding: 15px;
   overflow: hidden;
 }
 /* 内存元素可以滚动，但是宽度上比外层元素多15像素，即滚动条得宽度，这里用padding值将滚动条挤走 */
 .content-scroll {
   width: 100%;
   height: calc(100vh - 60px);
-  padding-right: 15px;
-  overflow: hidden;
-  overflow-y: auto;
 }
+/* 面包屑 */
 .crumbs {
   margin: 0 0 10px 0;
+}
+/* flex布局 */
+.layui-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* logo样式 */
+.layui-logo {
+  font-size: 24px;
+  height: 60px;
+  line-height: 60px;
+  text-indent: 20px;
+}
+/* 页面框架容器 */
+.layui-section {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 60px);
+}
+/* 卡片title */
+.layui-colla-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 公用content */
+.layui-content {
+  width: 100%;
+  height: calc(100% - 60px);
+  padding-right: 30px;
+  overflow: hidden;
+  overflow-y: auto;
 }
